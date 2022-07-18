@@ -1,0 +1,77 @@
+html {
+    background-color: rgb(208, 208, 224);
+}
+
+#all-wrap {
+    width: 1170px;
+    margin:  auto;
+    /* background-color: green; */
+}
+
+#new-tutorial {
+    background-color: blue;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    color: white;
+}
+
+#new-tutorial:hover {
+    background-color: green;
+    cursor: pointer;
+}
+
+#off {
+    color: red;
+    text-align: end;
+}
+#on {
+    color: green;
+}
+
+nav {
+    width: 1170px;
+}
+
+nav a {
+    text-decoration: none;
+    color: green;
+    font-size: 20px;
+}
+nav a:hover{
+    color: red;
+    text-decoration: none;
+}
+
+nav a:visited{
+    color: green;
+}
+nav a:visited:hover{
+    color: red;
+}
+
+.mainContainer {
+    width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.box {
+    width: 240px;
+    padding: 5px;
+    border: 2px solid green;
+    text-align: center;
+    word-wrap: break-word;   
+}
+
+.free {
+    color: green;
+}
+
+.private {
+    color: red;
+}

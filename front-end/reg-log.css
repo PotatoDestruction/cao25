@@ -1,0 +1,45 @@
+/* #all-wrap {
+    width: 1170px;
+    margin:  auto;
+    background-color: green;
+} */
+
+.mainContainer {
+    width: 300px;
+    margin: 0 auto;
+
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: green;
+    font-size: 20px;
+}
+nav a:hover{
+    color: red;
+    text-decoration: none;
+}
+
+nav a:visited{
+    color: green;
+}
+nav a:visited:hover{
+    color: red;
+}
+
+#off {
+    color: red;
+}
+#on {
+    color: green;
+}
+
+#have {
+    color: green;
+}
+#have:hover {
+    color: red;
+    cursor: pointer;
+}
+
