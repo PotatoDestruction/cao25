@@ -11,6 +11,7 @@ const authorized = (req, res, next) => {
         req.noToken = {
             token: "none"
         }
+        //test
         // console.log(req.noToken)
         next()
         return
