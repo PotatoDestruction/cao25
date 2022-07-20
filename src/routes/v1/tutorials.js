@@ -34,7 +34,8 @@ router.get("/user-tutorials/:id", authorized,  async (req,res) => {
 
 
 router.get("/online", authorized,  async (req,res) => {
-    let userId = req.user.userId
+    if(req.user) {
+    // let userId = req.user.userId
     try{
     const con = await mysql.createConnection(dbConfig);
     const [resp] = await con.query(`SELECT
@@ -42,10 +43,15 @@ router.get("/online", authorized,  async (req,res) => {
     FROM tutorials
     LEFT JOIN users ON users.id = tutorials.user_id`);
     con.end();
-    res.send({resp, userId});
+    res.send({resp, userId: req.user.userId});
     }catch(err){
         res.status(500).send(err);
     }
+}else {
+    console.log(req.noToken.token)
+
+}
+
 });
 
 router.get("/offline", async (req, res) => {

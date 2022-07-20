@@ -7,8 +7,13 @@ const authorized = (req, res, next) => {
     // console.log(authorization)
 
     if(!authorization) {
-        return res.status(400).send( { error: "Token is not provided" } );
-      
+        // return res.status(400).send( { error: "Token is not provided" } );
+        req.noToken = {
+            token: "none"
+        }
+        // console.log(req.noToken)
+        next()
+        return
     }
     
     const token = authorization.split(' ')[1];
@@ -16,7 +21,7 @@ const authorized = (req, res, next) => {
     try {
         
      data = jwt.verify(token, jwtSecret);
-        // console.log(data)
+        console.log(data)
 
     req.user = {
         userId: data.userId

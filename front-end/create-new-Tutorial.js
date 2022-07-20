@@ -16,7 +16,7 @@ const createTutorial = async (tutorial) => {
     
     const tutorials = await response.json();
 
-    
+    console.log(tutorials)
     
     if (tutorials.error) {
         window.location.href = "./login.html"
@@ -57,7 +57,7 @@ document.querySelector("form").addEventListener("submit", e => {
     // privateTutorial = false
 
     document.querySelector("form").reset()
-    // setTimeout(() => window.open("users.html", "_self"), 650);
-    // setTimeout(() => window.location.href = "./my-tutorials.html", 650)
+    
+    setTimeout(() => window.location.href = "./my-tutorials.html", 650)
 });
 
